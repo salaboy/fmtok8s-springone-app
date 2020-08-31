@@ -15,8 +15,8 @@ dependencies:
   owner: salaboy
   repo: fmtok8s-agenda
   url: https://github.com/salaboy/fmtok8s-agenda
-  version: 0.0.13
-  versionURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.13
+  version: 0.0.42
+  versionURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.42
 - host: github.com
   owner: salaboy
   repo: fmtok8s-api-gateway
