@@ -3,23 +3,23 @@ dependencies:
   owner: salaboy
   repo: fmtok8s-email
   url: https://github.com/salaboy/fmtok8s-email
-  version: 0.0.9
-  versionURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.9
+  version: 0.0.30
+  versionURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.30
 - host: github.com
   owner: salaboy
   repo: fmtok8s-c4p
   url: https://github.com/salaboy/fmtok8s-c4p
-  version: 0.0.27
-  versionURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.27
+  version: 0.0.51
+  versionURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.51
 - host: github.com
   owner: salaboy
   repo: fmtok8s-agenda
   url: https://github.com/salaboy/fmtok8s-agenda
-  version: 0.0.13
-  versionURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.13
+  version: 0.0.42
+  versionURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.42
 - host: github.com
   owner: salaboy
   repo: fmtok8s-api-gateway
   url: https://github.com/salaboy/fmtok8s-api-gateway
-  version: 0.0.36
-  versionURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.36
+  version: 0.0.99
+  versionURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.99
