@@ -1,0 +1,67 @@
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1598867381.625948,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-springone-app-m-jxxqk-w4mpv[0m
+{"level":"info","ts":1598867389.9168484,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*******/fmtok8s-springone-app.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1598867389.9169633,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1598867389.9637403,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /tekton/home/git/credentials
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+/tekton/home/basic-auth-user.json
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+/tekton/home/basic-auth-pass.json
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-m-jxxqk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+cat: /builder/home/basic-auth-user.json: No such file or directory
+cat: /builder/home/basic-auth-pass.json: No such file or directory
+rm -rf springone-app/charts
+rm -rf springone-app/springone-app*.tgz
+rm -rf springone-app/requirements.lock
+helm init --client-only
+Creating /tekton/home/.helm 
+Creating /tekton/home/.helm/repository 
+Creating /tekton/home/.helm/repository/cache 
+Creating /tekton/home/.helm/repository/local 
+Creating /tekton/home/.helm/plugins 
+Creating /tekton/home/.helm/starters 
+Creating /tekton/home/.helm/cache/archive 
+Creating /tekton/home/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Adding local repo with URL: http://127.0.0.1:8879/charts 
+$HELM_HOME has been configured at /tekton/home/.helm.
+Not installing Tiller due to 'client-only' flag having been set
+Happy Helming!
+helm repo add jenkins-x http://chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+helm repo add zeebe http://helm.zeebe.io
+"zeebe" has been added to your repositories
+helm repo add releases http://jenkins-x-chartmuseum:8080
+"releases" has been added to your repositories
+helm dependency build springone-app
+Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "releases" chart repository
+...Successfully got an update from the "zeebe" chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Error: Can't get a valid version for repositories fmtok8s-agenda, fmtok8s-c4p, fmtok8s-api-gateway, fmtok8s-email. Try changing the version constraint in requirements.yaml
+make: *** [build] Error 1
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-release'. The execution of the pipeline has stopped.[0m
