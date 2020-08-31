@@ -1,0 +1,16 @@
+# Default values for Conference.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# global:
+#   zeebe: zeebe
+
+# fmtok8s-c4p: 
+#     env:
+#         ZEEBE_CLIENT_BROKER_CONTACTPOINT : zeebe:26500
+# fmtok8s-agenda: 
+#     env:
+#         ZEEBE_CLIENT_BROKER_CONTACTPOINT : zeebe:26500 
+# fmtok8s-email: 
+#     env:
+#         ZEEBE_CLIENT_BROKER_CONTACTPOINT : zeebe:26500                
