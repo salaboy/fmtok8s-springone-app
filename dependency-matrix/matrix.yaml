@@ -3,8 +3,8 @@ dependencies:
   owner: salaboy
   repo: fmtok8s-email
   url: https://github.com/salaboy/fmtok8s-email
-  version: 0.0.31
-  versionURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.31
+  version: 0.0.32
+  versionURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.32
 - host: github.com
   owner: salaboy
   repo: fmtok8s-c4p
