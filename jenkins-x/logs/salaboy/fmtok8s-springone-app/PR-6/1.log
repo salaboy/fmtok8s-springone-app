@@ -1,0 +1,77 @@
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1598968962.3377542,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-springone-app-p-s2l94-cl6rm[0m
+{"level":"info","ts":1598968971.4212747,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*******/fmtok8s-springone-app.git @ master in path /workspace/source"}
+{"level":"warn","ts":1598968971.4214168,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1598968971.4918036,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c8b1ba9caeb4aa1beb415e99b38ea1e5f819e67c,6:d50d2b0ce1ad85d4b045826526fe2a30cca04c34
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow d50d2b0ce1ad85d4b045826526fe2a30cca04c34: c8b1ba9caeb4aa1beb415e99b38ea1e5f819e67c:
+DEBUG: ran git fetch --unshallow origin d50d2b0ce1ad85d4b045826526fe2a30cca04c34: c8b1ba9caeb4aa1beb415e99b38ea1e5f819e67c: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard c8b1ba9caeb4aa1beb415e99b38ea1e5f819e67c
+DEBUG: ran git reset --hard c8b1ba9caeb4aa1beb415e99b38ea1e5f819e67c in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge d50d2b0ce1ad85d4b045826526fe2a30cca04c34
+DEBUG: ran git merge d50d2b0ce1ad85d4b045826526fe2a30cca04c34 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e c8b1ba9caeb4aa1beb415e99b38ea1e5f819e67c..HEAD
+Merged SHA d50d2b0ce1ad85d4b045826526fe2a30cca04c34 with commit message 'chore(deps): bump https://github.com/*******/fmtok8s-email from 0.0.31 to 0.0.32' into base branch master
+
+Showing logs for build [32msalaboy-fmtok8s-springone-app-p-s2l94-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-build[0m
+cat: /builder/home/basic-auth-user.json: No such file or directory
+cat: /builder/home/basic-auth-pass.json: No such file or directory
+rm -rf springone-app/charts
+rm -rf springone-app/springone-app*.tgz
+rm -rf springone-app/requirements.lock
+helm init --client-only
+Creating /tekton/home/.helm 
+Creating /tekton/home/.helm/repository 
+Creating /tekton/home/.helm/repository/cache 
+Creating /tekton/home/.helm/repository/local 
+Creating /tekton/home/.helm/plugins 
+Creating /tekton/home/.helm/starters 
+Creating /tekton/home/.helm/cache/archive 
+Creating /tekton/home/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Adding local repo with URL: http://127.0.0.1:8879/charts 
+$HELM_HOME has been configured at /tekton/home/.helm.
+Not installing Tiller due to 'client-only' flag having been set
+Happy Helming!
+helm repo add jenkins-x http://chartmuseum.jenkins-x.io
+"jenkins-x" has been added to your repositories
+helm repo add zeebe http://helm.zeebe.io
+"zeebe" has been added to your repositories
+helm repo add releases http://jenkins-x-chartmuseum:8080
+"releases" has been added to your repositories
+helm dependency build springone-app
+Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "releases" chart repository
+...Successfully got an update from the "zeebe" chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "jenkins-x" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 4 charts
+Downloading fmtok8s-agenda from repo http://jenkins-x-chartmuseum:8080
+Downloading fmtok8s-c4p from repo http://jenkins-x-chartmuseum:8080
+Downloading fmtok8s-api-gateway from repo http://jenkins-x-chartmuseum:8080
+Downloading fmtok8s-email from repo http://jenkins-x-chartmuseum:8080
+Deleting outdated charts
+helm lint springone-app
+==> Linting springone-app
+Lint OK
+
+1 chart(s) linted, no failures
